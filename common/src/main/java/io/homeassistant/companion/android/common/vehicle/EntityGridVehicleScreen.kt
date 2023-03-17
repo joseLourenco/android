@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.vehicle
+package io.homeassistant.companion.android.common.vehicle
 
 import android.os.Build
 import android.util.Log

@@ -81,4 +81,7 @@ dependencies {
     implementation("com.vdurmont:emoji-java:5.1.1") {
         exclude(group = "org.json", module = "json")
     }
+
+    implementation("androidx.car.app:app:1.3.0-rc01")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.5.1")
 }

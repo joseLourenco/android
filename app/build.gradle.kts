@@ -1,14 +1,14 @@
 import com.github.triplet.gradle.androidpublisher.ResolutionStrategy
-import com.google.gms.googleservices.GoogleServicesPlugin.GoogleServicesPluginConfig
+//import com.google.gms.googleservices.GoogleServicesPlugin.GoogleServicesPluginConfig
 
 plugins {
     id("com.android.application")
     id("kotlin-android")
     id("kotlin-kapt")
     id("kotlin-parcelize")
-    id("com.google.firebase.appdistribution")
+    //id("com.google.firebase.appdistribution")
     id("com.github.triplet.play")
-    id("com.google.gms.google-services")
+    //id("com.google.gms.google-services")
     kotlin("kapt")
     id("dagger.hilt.android.plugin")
 }
@@ -56,11 +56,13 @@ android {
         targetCompatibility(JavaVersion.VERSION_11)
     }
 
+    /*
     firebaseAppDistribution {
         serviceCredentialsFile = "firebaseAppDistributionServiceCredentialsFile.json"
         releaseNotesFile = "./app/build/outputs/changelogBeta"
         groups = "continuous-deployment"
     }
+     */
 
     signingConfigs {
         create("release") {
@@ -213,6 +215,8 @@ dependencies {
 }
 
 // Disable to fix memory leak and be compatible with the configuration cache.
+/*
 configure<GoogleServicesPluginConfig> {
     disableVersionCheck = true
 }
+ */

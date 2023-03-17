@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">HomeAssistantApplication</string>
+    <string name="credentials_login_option_subtitle">Please enter your Home Assistant login info</string>
+    <string name="home_assistant_url_hint">Home Assistant URL</string>
+    <string name="username_hint">Username</string>
+    <string name="password_hint">Password</string>
+    <string name="invalid_home_assistant_url">Invalid Home Assistant URL</string>
+    <string name="invalid_username">Invalid Username</string>
+    <string name="sign_in_error">Authentication fail. Please try again.</string>
+    <string name="additional_home_assistant_url_message">Please enter your Home Assistant URL</string>
+    <string name="additional_username_message">Please enter your Username</string>
+    <string name="additional_password_message">Please enter your Password</string>
+</resources>

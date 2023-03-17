@@ -1,9 +1,6 @@
-package io.homeassistant.companion.android.vehicle
+package io.homeassistant.companion.android
 
-import android.content.Intent
-import android.os.Build
 import android.util.Log
-import androidx.annotation.RequiresApi
 import androidx.car.app.CarContext
 import androidx.car.app.model.Action
 import androidx.car.app.model.MessageTemplate
@@ -13,11 +10,9 @@ import io.homeassistant.companion.android.common.R
 import io.homeassistant.companion.android.common.data.integration.Entity
 import io.homeassistant.companion.android.common.data.servers.ServerManager
 import io.homeassistant.companion.android.common.vehicle.MainVehicleScreen
-import io.homeassistant.companion.android.launch.LaunchActivity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.StateFlow
 
-@RequiresApi(Build.VERSION_CODES.O)
 open class MainVehicleScreen(
     carContext: CarContext,
     override val serverManager: ServerManager,
@@ -41,11 +36,7 @@ open class MainVehicleScreen(
                         .setOnClickListener(
                             ParkedOnlyOnClickListener.create {
                                 Log.i(TAG, "Starting login activity")
-                                carContext.startActivity(
-                                    Intent(carContext, LaunchActivity::class.java).apply {
-                                        flags = Intent.FLAG_ACTIVITY_NEW_TASK
-                                    }
-                                )
+                                screenManager.push(LoginScreen(carContext))
                             }
                         )
                         .build()

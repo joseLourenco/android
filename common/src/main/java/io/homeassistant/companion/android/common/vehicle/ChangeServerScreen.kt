@@ -1,4 +1,4 @@
-package io.homeassistant.companion.android.vehicle
+package io.homeassistant.companion.android.common.vehicle
 
 import androidx.car.app.CarContext
 import androidx.car.app.Screen
